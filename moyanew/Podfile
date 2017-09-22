@@ -1,0 +1,14 @@
+ use_frameworks!
+target ‘moyanew’ do
+  
+   
+    pod 'Moya/RxSwift'
+    pod 'RxSwift'
+    pod 'RxCocoa'
+    pod 'ObjectMapper'
+    pod 'SVProgressHUD'
+
+
+end
+
+
