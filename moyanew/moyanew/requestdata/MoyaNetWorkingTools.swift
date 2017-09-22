@@ -56,7 +56,7 @@ class MoyaNetWorkingTools:NSObject{
     
     //加载数据,,用post方法获取
     func getDatawithpost(_ dict:NSDictionary,url:String,isToken:Bool,finished: @escaping (_ data:AnyObject?, _ error:NSString?)->()){
-        return  self.moyaprovider.request(.loaddatabypostMethod(mydict:self.md5str(paramedictone: dict),path:url)).subscribe {
+        return  self.moyaprovider.request(.loaddatabypostMethod(mydict:dict,path:url)).subscribe {
             (event) -> Void in
             switch event {
             case .success(let response):
@@ -82,7 +82,7 @@ class MoyaNetWorkingTools:NSObject{
     }
     //加载数据,用get方法获取
     func getDatawithget(_ dict:NSDictionary?,url:String,isToken:Bool,finished: @escaping (_ data:AnyObject?, _ error:NSString?)->()){
-        return  self.moyaprovider.request(.loaddatabygetMethod(mydict:self.md5str(paramedictone: dict),path:url)).subscribe {
+        return  self.moyaprovider.request(.loaddatabygetMethod(mydict:dict,path:url)).subscribe {
             (event) -> Void in
             switch event {
             case .success(let response):
